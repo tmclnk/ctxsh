@@ -1,6 +1,5 @@
 # ctxsh
-### A demonstration app which illustrates how to configure a transactional
-### Spring application which can be launched as a shell.
+#### A demonstration app which illustrates how to expose a Spring ApplicationContext to Groovy as an executable shell
 
 Requires
 * Maven
@@ -37,8 +36,8 @@ $ ctxsh
 ......
 2017-11-11 19:54:32 INFO  EmbeddedDatabaseFactory:189 - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
 2017-11-11 19:54:33 INFO  LocalContainerEntityManagerFactoryBean:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
-		2017-11-11 19:54:35 INFO  Shell:37 - Bound org.springframework.orm.jpa.SharedEntityManagerCreator#0 to Shared EntityManager proxy for target factory [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@6ddd71cc]
-		2017-11-11 19:54:35 INFO  Shell:51 - txStatus variable bound
+2017-11-11 19:54:35 INFO  Shell:37 - Bound org.springframework.orm.jpa.SharedEntityManagerCreator#0 to Shared EntityManager proxy for target factory [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@6ddd71cc]
+2017-11-11 19:54:35 INFO  Shell:51 - txStatus variable bound
 ```
 Note that you'll need to send an EOF (ctrl-d) to exit the "shell."
 
