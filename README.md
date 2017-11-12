@@ -13,6 +13,10 @@ to write a UI). For example, I occasionally have to fetch arbitrary
 datasets via web services, run business rules, trigger scheduled
 tasks, manage queues, and manage users.
 
+All of the data here is stored in an embedded H2 database.  Any JDBC
+configuration should be fine.  I'm using Spring @Transaction
+support and a TransactionTemplate.
+
 Many of the above tasks are well suited to a Groovy DSL.
 
 Running
@@ -71,6 +75,7 @@ included with the JDK works quite well, but I was unable to find a
 decent "import" mechanism.  
 
 ## Wishlist Items
+* Make this interpret as a shell, one line at a time.
 * Make this a REPL.
 * Do it in Javascript.
 * Do this from a web app.
