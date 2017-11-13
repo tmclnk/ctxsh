@@ -17,8 +17,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import be.shouldyou.example.MyConfig;
-
 public class GroovyShell implements Closeable{
 	private static final Logger logger = LoggerFactory.getLogger(GroovyShell.class);
 	private static final String engineName = "groovy";
@@ -35,7 +33,7 @@ public class GroovyShell implements Closeable{
 	public GroovyShell(Class<?> configClass) {
 		logger.info("Using {}", engineName);
 		
-		appCtx = new AnnotationConfigApplicationContext(MyConfig.class);
+		appCtx = new AnnotationConfigApplicationContext(configClass);
 		// bind all the beans in the app context 
 		// to the script so we can access them by name
 		for(String beanName : appCtx.getBeanDefinitionNames()){
