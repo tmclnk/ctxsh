@@ -22,7 +22,7 @@ public class GroovyShell implements Closeable{
 	private static final String engineName = "groovy";
 	
 	private final AnnotationConfigApplicationContext appCtx;
-	private final ScriptEngineManager factory = new ScriptEngineManager(Shell.class.getClassLoader());
+	private final ScriptEngineManager factory = new ScriptEngineManager(GroovyShell.class.getClassLoader());
 	private final ScriptEngine engine = factory.getEngineByName(engineName);
 
 	/**
@@ -30,7 +30,7 @@ public class GroovyShell implements Closeable{
 	 * and bind all of its beans to the {@link #engine}.
 	 * @param configClass a Spring {@link Configuration} class
 	 */
-	public GroovyShell(Class<?> configClass) {
+	public GroovyShell(Class<?>... configClass) {
 		logger.info("Using {}", engineName);
 		
 		appCtx = new AnnotationConfigApplicationContext(configClass);
