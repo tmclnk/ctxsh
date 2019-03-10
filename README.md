@@ -19,7 +19,9 @@ support and a TransactionTemplate.
 
 Many of the above tasks are well suited to a Groovy DSL.
 
-Running
+[![Build Status](https://dev.azure.com/prairiegrade/ctxsh/_apis/build/status/tmcoma.ctxsh?branchName=master)](https://dev.azure.com/prairiegrade/ctxsh/_build/latest?definitionId=8&branchName=master)
+
+## Running
 ```
 mvn clean install
 mvn exec:java
